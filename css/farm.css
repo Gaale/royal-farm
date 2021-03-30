@@ -1,0 +1,334 @@
+
+@media screen and (min-width: 1200px) {
+   .container-farm{
+      -webkit-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+              transform: scale(1.3);
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+   } 
+}
+@font-face{
+   font-family: 'Nexa Script Light';
+   src: url(../fonts/19442.ttf);
+}
+html, body {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   overflow: hidden;
+   min-width: 800px;
+   -webkit-user-select: none;
+      -moz-user-select: none;
+       -ms-user-select: none;
+           user-select: none;
+   cursor: url(../img/cursor.png), default;
+}
+
+#body {
+   background-color: #fff;
+   font-family: 'Nexa Script Light';
+}
+
+#container{
+   width: 100%;
+   height: 100%;
+   background-image: url(../img/bg.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   position: relative;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+}
+
+
+#gold-panel, #amountWaterTop, #amountWheatTop, #amountEggsTop {
+   height: 60px;
+   width: 170px;
+   position: absolute;
+   text-align: center;
+   background-size: 100% 100%;
+}
+#gold-panel{
+   top: 20px;
+   right: 40px;
+   background-image: url(../img/gold.png);
+}
+#gold_btn {
+   height: 20px;
+   width: 20px;
+   position: absolute;
+   top: 24px;
+   right: 8px;
+   background-image: url(../img/gold_btn.png);
+   background-size: 100% 100%;
+   cursor: url(../img/pointer.png), pointer;
+}
+#gold_btn:active {
+   -webkit-transform: translateY(1px);
+       -ms-transform: translateY(1px);
+           transform: translateY(1px);
+}
+#amountWaterTop{
+   top: 20px;
+   left: 30px;
+   background-image: url(../img/water-panel.png);
+}
+#amountWheatTop{
+   top: 20px;
+   left: 210px;
+   background-image: url(../img/wheat-panel.png);
+}
+#amountEggsTop{
+   top: 20px;
+   left: 390px;
+   background-image: url(../img/eggs-panel.png);
+}
+#gold-show, #amountWheatTop, #amountWaterTop, #amountEggsTop {
+   font-size: 18px;
+   color: gold;
+   line-height: 67px;
+}
+.container-farm{
+   margin: auto;
+   width: 700px;
+   min-width: 650px;
+   height: 400px;
+   -webkit-transition: 0.5s;
+   -o-transition: 0.5s;
+   transition: 0.5s;
+}
+.field {
+   width: 170px;
+   height: 130px;
+   background-image: url('../img/field.png');
+   background-size: contain;
+   background-repeat: no-repeat;
+   margin: 10px;
+   -webkit-perspective: 900px;
+           perspective: 900px;
+   position: relative;
+   cursor: url(../img/pointer.png), pointer;
+}
+.field-container{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: space-evenly;
+       -ms-flex-pack: space-evenly;
+           justify-content: space-evenly;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   margin-top: 150px;
+}
+
+.field-container, .progress-bar-container, .count-container{
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: space-evenly;
+       -ms-flex-pack: space-evenly;
+           justify-content: space-evenly;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+}
+.img-wheat, .img-well, .img-chicken{
+   display: inline-block;
+   vertical-align: top;
+   position: absolute;
+   cursor: url(../img/pointer.png), pointer;
+   
+   background-size: 100% 100%;
+}
+.img-wheat{
+   width: 50px;
+   height: 90px;
+   background-image: url(../img/wheat.png);
+}
+.img-well{
+   width: 80px;
+   height: 120px;
+   background-image: url(../img/well.png);
+   top: -45px;
+   left: 45px;
+}
+.wheat1{
+   top: -45px;
+   left: 60px;
+}
+.wheat2{
+   top: 5px;
+   left: 65px;
+   -webkit-transform: rotateY(180deg);
+           transform: rotateY(180deg);
+}
+.wheat3{
+   top: -20px;
+   left: 25px;
+}
+.wheat4{
+   top: -20px;
+   left: 100px;
+   -webkit-transform: rotateY(180deg);
+           transform: rotateY(180deg);
+}
+.img-chicken{
+   width: 100px;
+   height: 120px;
+   background-image: url(../img/chicken.png);
+   top: -45px;
+   left: 30px;
+}
+.progress-bar {
+   background-color: #1a1a1a;
+   height: 5px;
+   padding: 5px;
+   width: 150px;
+   margin: 10px 15px;
+   border-radius: 5px;
+   -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+           box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+   }
+   .progress-bar span {
+   display: inline-block;
+   height: 7px;
+   width: 0%;
+   border-radius: 3px;
+   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+           box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;-webkit-transition: width .4s ease-in-out;-o-transition: width .4s ease-in-out;transition: width .4s ease-in-out;
+   margin-bottom: 7px;
+           /* style="width: 40%" */
+   }
+   .green span {
+      background-color: #a5df41;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#a5df41), to(#4ca916));
+      background-image: -o-linear-gradient(top, #a5df41, #4ca916);
+      background-image: linear-gradient(top, #a5df41, #4ca916);
+   }
+   .count {
+      display: inline-block;
+      vertical-align: top;
+      width: 60px;
+      height: 30px;
+      border: 2px solid brown;
+      background-color: wheat;
+      border-radius: 5px;
+      margin: 5px;
+      line-height: 30px;
+      text-align: center;
+      margin: 0 70px;
+      color: brown;
+   }
+   
+   .button-store-cover,
+   .button-sound-cover,
+   .button-fs-cover {
+      position: absolute;
+      bottom: -95px;
+      left: -70px;
+      width: 300px;
+      height: 100px;
+      background-image: url(../img/label.png);
+      background-size: 100% 100%;
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+   }
+
+   .button-sound-cover{
+      bottom: -47px;
+      left: 80px;
+      width: 150px;
+      height: 50px;
+   }
+   .button-fs-cover{
+      bottom: -47px;
+      left: 133px;
+      width: 150px;
+      height: 50px;
+   }
+
+   .button-store,
+   .button-sound,
+   .button-fs {
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+      width: 78px;
+      height: 78px;
+      background-image: url(../img/btn-store.png);
+      background-size: 100% 100%;
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      -webkit-transition: 0.25s;
+      -o-transition: 0.25s;
+      transition: 0.25s;
+      cursor: url(../img/pointer.png), pointer;
+      
+   }
+   .button-sound,
+   .button-fs{
+      width: 39px;
+      height: 39px;
+      bottom: 6px;
+      left: 8px;
+   }
+
+   .button-sound {
+      background-image: url(../img/sound.png);
+   }
+   .button-fs{
+      background-image: url(../img/fs-in.png);
+   }
+   .change_icon_fs{
+      background-image: url(../img/fs-out.png);
+   }
+   .button-store:hover,
+   .button-sound:hover,
+   .button-fs:hover {
+      -webkit-filter: drop-shadow(-1px 0px 13px #f5a80d);
+              filter: drop-shadow(-1px 0px 13px #f5a80d);
+      -webkit-transform: rotate(-90deg), translate(2px);
+          -ms-transform: rotate(-90deg), translate(2px);
+              transform: rotate(-90deg), translate(2px);
+   }
+   .button-store:active,
+   .button-sound:active,
+   .button-fs:active {
+      -webkit-filter: drop-shadow(-1px 0px 10px #f5a80d);
+              filter: drop-shadow(-1px 0px 10px #f5a80d);
+      -webkit-transform: rotate(-90deg), translate(2px);
+          -ms-transform: rotate(-90deg), translate(2px);
+              transform: rotate(-90deg), translate(2px);
+      left: 16px;
+   }
+   
+   .button-sound:active,
+   .button-fs:active {
+      
+      -webkit-transform: rotate(-90deg), translateY(2px);
+      
+          -ms-transform: rotate(-90deg), translateY(2px);
+      
+              transform: rotate(-90deg), translateY(2px);
+      left: 9px;
+   }
+
+   .error {
+      -webkit-filter: drop-shadow(0px 0px 10px #f53b0d);
+              filter: drop-shadow(0px 0px 10px #f53b0d);
+   }
+    
+      

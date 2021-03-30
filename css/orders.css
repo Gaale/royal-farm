@@ -1,0 +1,209 @@
+
+#preload{
+   position: absolute;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   top: 0;
+   background-image: url(../img/preload.png);
+   background-size: 100% 100%;
+   background-position: center center;
+   background-repeat: no-repeat;
+   z-index: 40;
+}
+ 
+#intro {
+   width: 80%;
+   height: 60%;
+   max-width: 1250px;
+   max-height: 600px;
+   min-height: 400px;
+   background-image: url(../img/scroll.png);
+   background-size: 100% 100%;
+   text-align: center;
+   display: flex;
+   position: absolute;
+   padding-top: calc(130px + 30 * ((100vh - 700px) / 1400));
+   padding-bottom: calc(50px + 12 * ((100vh - 800px) / 1400));
+   padding-left: calc(50px + 12 * ((100vw - 700px) / 1400));
+   padding-right: calc(50px + 12 * ((100vw - 700px) / 1400));
+   left: 5%;
+   top: 10%;
+   z-index: 30;
+   opacity: 0;
+   transition: opacity 1s;
+   align-content: center;
+   justify-content: center;
+   -webkit-transition: opacity 1s;
+   -o-transition: opacity 1s;
+   transition: opacity 1s;
+   -ms-flex-line-pack: center;
+       align-content: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+}
+@-webkit-keyframes intro_ani {
+   to {
+      opacity: 1;
+   }
+}
+@keyframes intro_ani {
+   to {
+      opacity: 1;
+   }
+}
+
+#intro h3, #intro p {
+   font-size: calc(14px + 12 * ((100vw - 800px) / 1400));
+   display: block;
+   width: 80%;
+   margin: auto;
+   padding: 5px 0;
+}
+#btn-intro1, #btn-intro2{
+   background-image:url(../img/green_btn.png);
+   display: inline-block;
+   vertical-align: top;
+   width: 120px;
+   height: 35px;
+   line-height: 35px;
+   background-size: 100% 100%;
+   font-size: 22px;
+   cursor: url(../img/pointer.png), pointer;
+   position: absolute;
+   bottom: calc(90px + 12 * ((100vh - 800px) / 1400));
+   text-align: center;
+   padding: 0 15px;
+   color: #fff;
+}
+#btn-intro1 {
+   left: 28%;
+}
+#btn-intro2 {
+   right: 28%;
+}
+#btn-intro:active, .btn_order:active {
+   -webkit-transform: translateY(1px);
+       -ms-transform: translateY(1px);
+           transform: translateY(1px);
+}
+.order {
+   width: 700px;
+   height: 250px;
+   background-image: url(../img/scroll.png);
+   background-size: 100% 100%;
+   display: none;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   -webkit-transform: scale(1);
+       -ms-transform: scale(1);
+           transform: scale(1);
+   -webkit-transition: 2s;
+   -o-transition: 2s;
+   transition: 2s;
+   -webkit-animation: order_ani 2s forwards;
+           animation: order_ani 2s forwards;
+   position: absolute;
+   bottom: calc(50% - 125px);
+   right: calc(50% - 350px);
+   z-index: 20;
+
+}
+
+@-webkit-keyframes order_ani {
+   to {
+      -webkit-transform: scale(.8);
+              transform: scale(.8);
+      bottom: calc(60% - 50px);
+   }
+}
+
+@keyframes order_ani {
+   to {
+      -webkit-transform: scale(.8);
+              transform: scale(.8);
+      bottom: calc(60% - 50px);
+   }
+}
+
+@-webkit-keyframes order_ani2 {
+   from{
+      -webkit-transform: scale(.8);
+              transform: scale(.8);
+      bottom: calc(60% - 50px);
+      right: calc(50% - 350px);
+   }
+   to {
+      -webkit-transform: scale(.6);
+              transform: scale(.6);
+      bottom: -50px;
+      right: -80px;
+   }
+}
+
+@keyframes order_ani2 {
+   from{
+      -webkit-transform: scale(.8);
+              transform: scale(.8);
+      bottom: calc(60% - 50px);
+      right: calc(50% - 350px);
+   }
+   to {
+      -webkit-transform: scale(.6);
+              transform: scale(.6);
+      bottom: -50px;
+      right: -80px;
+   }
+}
+
+.img_order{
+   width: 60px;
+   height: 100px;
+   background-image: url(../img/king.png);
+   background-size: 100% 100%;
+}
+.text_order {
+   font-size: 23px;
+   line-height: 35px;
+   padding: 5px;
+   text-align: center;
+   padding: 0 10px;
+   position: relative;
+}
+
+#failCost, #orderCost, #timer {
+   padding: 0 15px 0 0;
+}
+.btn_order {
+   display: inline-block;
+   width: 120px;
+   height: 35px;
+   line-height: 35px;
+   background-size: 100% 100%;
+   font-size: 22px;
+   cursor: url(../img/pointer.png), pointer;
+   position: absolute;
+   bottom: 20px;
+   text-align: center;
+   padding: 0 15px;
+   color: #fff;
+   
+}
+.red_btn_order {
+   background-image: url(../img/red_btn_wo_leaf.png);
+   right: 130px;
+}
+.green_btn_order {
+   background-image: url(../img/green_btn.png);
+   left: 130px;
+}
+#order_done {
+   left: calc(50% - 60px);
+   display: none;
+}
+

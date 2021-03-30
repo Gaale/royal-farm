@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Royal Farm Web Game" />
+    <meta name="keywords" lang="ru" content="Web game, clicker, farm" />
+    <meta name="Author" content="Sukhovskaya Galina" />
+    <meta name="Address" content="Odessa" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
+    <title>Royal Farm</title>
+    <link rel="stylesheet" href="css/farm.css" />
+    <link rel="stylesheet" href="css/store.css" />
+    <link rel="stylesheet" href="css/orders.css" />
+    <link rel="stylesheet" href="css/loading.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script defer src="js/farm.js"></script>
+    <script defer src="js/store.js"></script>
+    <script defer src="js/orders.js"></script>
+  </head>
+  <body id="body">
+    <div id="container">
+      <div id="preload">
+        <div class="loading">
+          <div class="squareXS"></div>
+          <div class="squareXL"></div>
+        </div>
+        <div id="intro">
+          <h3>Дорогой Фермер!</h3>
+          <p>Мы рады что ты решил взять на себя заботу о Королевской Ферме.</p>
+          <p>
+            На нашей ферме можно добывать лучшую воду в королевстве, выращивать
+            на этой воде лучшую пшеницу и разводить лучших курочек.
+          </p>
+          <p>
+            Воду, пшеницу и яйца от наших курочек можно продать на ярмарке и
+            получить за них хорошую цену. А на золотые приобрести очень полезные
+            улучшения для фермы.
+          </p>
+          <p>
+            Но помни, королевский двор все время присылает заказы, и очень
+            недоволен, когда они не исполняются в срок. Если ты принял заказ и
+            не выполнил его вовремя, ты будешь оштрафован.
+          </p>
+          <p>Распоряжайся временем и ресурсами с умом и тебя ждет успех.</p>
+          <p>Удачи, Фермер!</p>
+          <div id="btn-intro1">Продолжить</div>
+          <div id="btn-intro2">Новая игра</div>
+        </div>
+      </div>
+      <div id="gold-panel">
+        <div id="gold_btn"></div>
+        <span id="gold-show">0</span>
+      </div>
+      <div id="water-panel"><span id="amountWaterTop">0</span></div>
+      <div id="wheat-panel"><span id="amountWheatTop">0</span></div>
+      <div id="eggs-panel"><span id="amountEggsTop">0</span></div>
+      <div class="container-farm">
+        <div class="field-container">
+          <div class="field water">
+            <span class="img-well"></span>
+          </div><!--
+         --><div class="field wheat">
+            <span class="img-wheat wheat1"></span>
+            <span class="img-wheat wheat2"></span>
+            <span class="img-wheat wheat3"></span>
+            <span class="img-wheat wheat4"></span>
+          </div><!--
+         --><div class="field eggs">
+            <span class="img-chicken"></span>
+          </div>
+        </div><!--
+      --><div class="progress-bar-container">
+          <div class="progress-bar green">
+            <span id="progressWater" class="green-sb pb1"></span>
+          </div>
+          <div class="progress-bar green">
+            <span id="progressWheat" class="green-sb pb2"></span>
+          </div>
+          <div class="progress-bar green">
+            <span id="progressEggs" class="green-sb pb3"></span>
+          </div>
+        </div>
+        <div class="count-container">
+          <div id="amountWater" class="count cnt1">0</div>
+          <div id="amountWheat" class="count cnt2">0</div>
+          <div id="amountEggs" class="count cnt3">0</div>
+        </div>
+      </div>
+      <div class="button-store-cover">
+        <div class="button-store"></div>
+      </div>
+      <div class="button-sound-cover">
+        <div class="button-sound"></div>
+      </div>
+      <div id="sounds-menu">
+        <div class="cover-menu-sounds item">
+          <div class="text">Музыка</div>
+          <div class="container-img-sounds">
+            <div id="mute-music"></div>
+            <input id="range-music" type="range" min="0" max="100" value="50" />
+          </div>
+          <div class="text">Звуки</div>
+          <div class="container-img-sounds">
+            <div id="mute-sounds"></div>
+            <input
+              id="range-sounds"
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="button-fs-cover">
+        <div class="button-fs"></div>
+      </div>
+      <div class="container-store">
+        <div class="title-store">Ярмарка</div>
+        <div class="buttons">
+          <div class="panel-sell">
+            <img
+              src="img/products.png"
+              alt="products"
+              width="120px"
+              height="80px"
+            />
+            <p>
+              На нашей ярмарке вы всегда можете продать свою продукцию по самым
+              выгодным ценам
+            </p>
+            <div class="btn button-sell">Продать</div>
+          </div>
+          <div class="panel-buy">
+            <img
+              src="img/egg-hero.png"
+              alt="egg-hero"
+              width="80px"
+              height="80px"
+            />
+            <p>
+              Здесь можно купить особые товары. За такие и заплатить не жалко
+            </p>
+            <div class="btn button-buy">Купить</div>
+          </div>
+        </div>
+
+        <div id="selling" class="sell">
+          <div class="btns_in_the_sell">
+            <div id="quit_sell" class="btn">Покинуть ярмарку</div>
+            <div id="to_buy_smth" class="btn">Что-то купить</div>
+          </div>
+          <div class="item sell-water">
+            <div class="text">Продать Воду</div>
+            <div class="amount">
+              <span id="minus-water" class="minus">-</span>
+              <span id="num-water" class="num">0</span>
+              <span id="plus-water" class="plus">+</span>
+            </div>
+            <div id="total-water" class="total">0</div>
+            <img class="coins" src="img/coins.png" alt="coins" />
+            <div id="sold-water" class="btn">Продать</div>
+          </div>
+          <div class="item sell-wheat">
+            <div class="text">Продать Пшеницу</div>
+            <div class="amount">
+              <span id="minus-wheat" class="minus">-</span>
+              <span id="num-wheat" class="num">0</span>
+              <span id="plus-wheat" class="plus">+</span>
+            </div>
+            <div id="total-wheat" class="total">0</div>
+            <img class="coins" src="img/coins.png" alt="coins" />
+            <div id="sold-wheat" class="btn">Продать</div>
+          </div>
+          <div class="item sell-eggs">
+            <div class="text">Продать Яйца</div>
+            <div class="amount">
+              <span id="minus-eggs" class="minus">-</span>
+              <span id="num-eggs" class="num">0</span>
+              <span id="plus-eggs" class="plus">+</span>
+            </div>
+            <div id="total-eggs" class="total">0</div>
+            <img class="coins" src="img/coins.png" alt="coins" />
+            <div id="sold-eggs" class="btn">Продать</div>
+          </div>
+        </div>
+
+        <div id="buying" class="buy">
+          <div class="btns_in_the_buy">
+            <div id="quit_buy" class="btn">Покинуть ярмарку</div>
+            <div id="to_sell_smth" class="btn">Что-то продать</div>
+          </div>
+          <div id="impr-speed-water" class="item">
+            <div id="text-speed-up-water" class="text">Медное ведро</div>
+            <div id="cost-speed-up-water" class="total">100</div>
+            <img class="coins-img" src="img/coins.png" alt="coins" />
+            <div id="buy-speed-up-water" class="btn">Купить</div>
+          </div>
+          <div id="impr-speed-wheat" class="item">
+            <div id="text-speed-up-wheat" class="text">Обычное удобрение</div>
+            <div id="cost-speed-up-wheat" class="total">250</div>
+            <img class="coins-img" src="img/coins.png" alt="coins" />
+            <div id="buy-speed-up-wheat" class="btn">Купить</div>
+          </div>
+          <div id="impr-speed-eggs" class="item">
+            <div id="text-speed-up-eggs" class="text">Обычный корм</div>
+            <div id="cost-speed-up-eggs" class="total">600</div>
+            <img class="coins-img" src="img/coins.png" alt="coins" />
+            <div id="buy-speed-up-eggs" class="btn">Купить</div>
+          </div>
+          <template id="tmplt2">
+            <div class="order">
+              <div class="img_order"></div>
+              <div class="text_order">
+                <div>Заказ от короля!</div>
+                <div id="order-quantity">40 Пшеницa</div>
+                <div>
+                  <img width="23px" height="23px" src="img/reward.png" />
+                  <span id="order-reward">80 золотых</span>
+                  <img width="23px" height="23px" src="img/fail.png" />
+                  <span id="order-fail">100 золотых</span>
+                  <img
+                    width="23px"
+                    height="23px"
+                    src="img/timer.png"
+                    id="order-timer-img"
+                  />
+                  <span id="order-timer">00:05:00</span>
+                </div>
+              </div>
+              <span id="order_agree" class="btn_order green_btn_order"
+                >Принять</span
+              >
+              <span id="order_done" class="btn_order green_btn_order"
+                >Отправить</span
+              >
+              <span id="order_disagree" class="btn_order red_btn_order"
+                >Отказать</span
+              >
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
