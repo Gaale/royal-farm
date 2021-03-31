@@ -186,7 +186,6 @@ function onClickSellGoods(e) {
   if (e.target === soldWater && counterWaterStore <= counter.getWaterCounter()) {
 
     counter.setWaterCounter(counter.getWaterCounter() - counterWaterStore);
-    // counterWater -= counterWaterStore;
 
     amountWater.textContent = counter.getWaterCounter() + "";
     amountWaterTop.textContent = counter.getWaterCounter() + "";
@@ -222,7 +221,6 @@ function onClickSellGoods(e) {
     counter.setWheatCounter(counter.getWheatCounter() - counterWheatStore);
     amountWheat.textContent = counter.getWheatCounter() + "";
     amountWheatTop.textContent = counter.getWheatCounter() + "";
-
     goldSumm.set(goldSumm.get() + counterWheatStore * price.getWheatPrice());
     gold.textContent = goldSumm.get();
     sounds.src = "";
@@ -252,7 +250,6 @@ function onClickSellGoods(e) {
   //продаем яйца
   if (e.target === soldEggs && counterEggsStore <= counter.getEggsCounter()) {
     counter.setEggsCounter(counter.getEggsCounter() - counterEggsStore);
-    // counterEggs -= counterEggsStore;
     amountEggs.textContent = counter.getEggsCounter() + "";
     amountEggsTop.textContent = counter.getEggsCounter() + "";
     goldSumm.set(goldSumm.get() + counterEggsStore * price.getEggsPrice());
@@ -367,14 +364,12 @@ function switchStepWater() {
       gold.textContent = goldSumm.get();
       waterSpeedUp(33.34, 500, "Золотое ведро");
       costSpeedUpWater.textContent = priceSpeedUp.getWaterSpeedUpPrice() + "";
-
       break;
     case 33.34:
       goldSumm.set(goldSumm.get() - priceSpeedUp.getWaterSpeedUpPrice());
       gold.textContent = goldSumm.get();
       waterSpeedUp(50, 1000, "Платиновое ведро");
       costSpeedUpWater.textContent = priceSpeedUp.getWaterSpeedUpPrice() + "";
-
       break;
     case 50:
       goldSumm.set(goldSumm.get() - priceSpeedUp.getWaterSpeedUpPrice());

@@ -13,22 +13,17 @@
 }
  
 #intro {
-   width: 80%;
-   height: 60%;
-   max-width: 1250px;
-   max-height: 600px;
-   min-height: 400px;
+   width: 800px;
+   height: 600px;
+   box-sizing: border-box;
    background-image: url(../img/scroll.png);
    background-size: 100% 100%;
    text-align: center;
    display: flex;
    position: absolute;
-   padding-top: calc(130px + 30 * ((100vh - 700px) / 1400));
-   padding-bottom: calc(50px + 12 * ((100vh - 800px) / 1400));
-   padding-left: calc(50px + 12 * ((100vw - 700px) / 1400));
-   padding-right: calc(50px + 12 * ((100vw - 700px) / 1400));
-   left: 5%;
-   top: 10%;
+   padding: 140px 50px 50px;
+   left: calc(50% - 400px);
+   top: calc(50% - 300px);
    z-index: 30;
    opacity: 0;
    transition: opacity 1s;
@@ -42,6 +37,7 @@
    -webkit-box-pack: center;
        -ms-flex-pack: center;
            justify-content: center;
+           
 }
 @-webkit-keyframes intro_ani {
    to {
@@ -55,7 +51,7 @@
 }
 
 #intro h3, #intro p {
-   font-size: calc(14px + 12 * ((100vw - 800px) / 1400));
+   font-size: 18px;
    display: block;
    width: 80%;
    margin: auto;

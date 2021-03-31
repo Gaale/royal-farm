@@ -296,21 +296,18 @@ function getTimeShow() {
 done.addEventListener("click", () => {
   if (typeOfGoods === "Воды" && quantityOfGoods <= counter.getWaterCounter()) {
     counter.setWaterCounter(counter.getWaterCounter() - quantityOfGoods);
-    // counterWater -= quantityOfGoods;
     amountWater.textContent = counter.getWaterCounter() + "";
     amountWaterTop.textContent = counter.getWaterCounter() + "";
     ifDone();
     done.style.display = 'none';
   } else if (typeOfGoods === "Пшеницы" && quantityOfGoods <= counter.getWheatCounter()) {
     counter.setWheatCounter(counter.getWheatCounter() - quantityOfGoods);
-    // counterWheat -= quantityOfGoods;
     amountWheat.textContent = counter.getWheatCounter();
     amountWheatTop.textContent = counter.getWheatCounter();
     ifDone();
     done.style.display = 'none';
   } else if (typeOfGoods === "Яиц" && quantityOfGoods <= counter.getEggsCounter()) {
     counter.setEggsCounter(counter.getEggsCounter() - quantityOfGoods);
-    // counterEggs -= quantityOfGoods;
     amountEggs.textContent = counter.getEggsCounter();
     amountEggsTop.textContent = counter.getEggsCounter();
     ifDone();

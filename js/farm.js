@@ -1,11 +1,9 @@
 "use strict";
 
 const body = document.querySelector("#body");
-//delete
 const water = document.querySelector(".water");
 const wheat = document.querySelector(".wheat");
 const eggs = document.querySelector(".eggs");
-//delete
 const field = document.getElementsByClassName('field');
 const progressBar = document.querySelector(".progress-bar-container");
 const count = document.querySelector(".count-container");
@@ -128,7 +126,6 @@ wheat.addEventListener("click", (e) => {
     amountWater.textContent = counter.getWaterCounter();
     amountWaterTop.textContent = counter.getWaterCounter();
     counter.setWheatCounter(counter.getWheatCounter() + 1);
-    // counterWheat++;
     amountWheat.textContent = counter.getWheatCounter();
     amountWheatTop.textContent = counter.getWheatCounter();
     wheat.classList.add("floating");
@@ -149,15 +146,12 @@ eggs.addEventListener("click", (e) => {
     progressEggs.style.width = "0%";
     progressBarEggs = 0;
     counter.setWaterCounter(counter.getWaterCounter() - 1);
-    // counterWater--;
     amountWater.textContent = counter.getWaterCounter();
     amountWaterTop.textContent = counter.getWaterCounter();
     counter.setWheatCounter(counter.getWheatCounter() - 1);
-    // counterWheat--;
     amountWheat.textContent = counter.getWheatCounter();
     amountWheatTop.textContent = counter.getWheatCounter();
     counter.setEggsCounter(counter.getEggsCounter() + 1);
-    // counterEggs++;
     amountEggs.textContent = counter.getEggsCounter();
     amountEggsTop.textContent = counter.getEggsCounter();
     eggs.classList.add("floating");

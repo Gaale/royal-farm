@@ -9,6 +9,26 @@
       transition: 0.5s;
    } 
 }
+@media screen and (min-width: 1800px) {
+   .container-farm, #intro{
+      -webkit-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+              transform: scale(1.5);
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+   }
+}
+@media screen and (min-width: 2600px) {
+   .container-farm, #intro{
+      -webkit-transform: scale(2);
+          -ms-transform: scale(2);
+              transform: scale(2);
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+   }
+}
 @font-face{
    font-family: 'Nexa Script Light';
    src: url(../fonts/19442.ttf);
@@ -19,6 +39,7 @@ html, body {
    margin: 0;
    overflow: hidden;
    min-width: 800px;
+   min-height: 800px;
    -webkit-user-select: none;
       -moz-user-select: none;
        -ms-user-select: none;
